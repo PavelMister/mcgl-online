@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        <title>MCGL Online</title>
+        <script src="jquery-3.2.1.min.js" type="text/javascript"></script>
+        <link href="style.css" rel="stylesheet" type="text/css"/>
+        <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+        <div id="eventsBlock">
+            <b>События:</b>
+        </div>
+        <div id="settingsBlock">
+            Настройки
+            <br/>
+
+            URL для ручного мониторинга:
+            <form method="GET" action="#">
+                <input title="URL для ручного мониторинга" type="text" id="otherUrl"/>
+                <span id="saveBlock">Сохранить</span>
+            </form>
+        </div>
+    </head>
+
+    <body>
+    <div class="contentBlock">
+        <div id="main">
+            <div id class="garants main-tabs">Гаранты</div>
+            <div id class="helpers main-tabs">Хелперы</div>
+            <div id class="profis main-tabs">Profis Club</div>
+            <div id class="other main-tabs">Ручной</div>
+            <div id class="fortes main-tabs">Крепости</div>
+            <div id class="events main-tabs"><img style="width: 20px; height: 20px;" src="img/events-ico.ico"/></div>
+            <div id class="settings main-tabs"><img style="width: 20px; height: 20px;" src="img/settings-ico.jpg"/></div>
+        </div>
+        <br/>
+
+        <div id="view">
+            Выберите нужную для Вас вкладку.
+        </div>
+
+        <div id="loading"></div>
+    </div>
+    <div class="footerBlock">
+        <div id="online"></div>
+        <div id="links">
+            <a href="http://forum.minecraft-galaxy.ru/forum/0" target="_blank">Форум</a><br/>
+            <a href="http://forum.minecraft-galaxy.ru/profilemain/397240" target="_blank">Panya</a>
+        </div>
+
+
+        <div id="rightLine">
+            <div class="refresh">
+                <img id ondrag="return false" ondragdrop="return false" ondragstart="return false" src="img/refresh.png"/>
+            </div>
+        </div>
+    </div>
+    <script src="settings.js" type="text/javascript"></script>
+    <script src="content.js" type="text/javascript"></script>
+    <script src="safeResponse.js" type="text/javascript"></script>
+    <script src="dateHelper.js" type="text/javascript"></script>
+    </body>
+</html>

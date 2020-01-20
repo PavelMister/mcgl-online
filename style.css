@@ -1,0 +1,304 @@
+html, body {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    min-width: 450px;
+}
+
+form {
+    padding: 5px;
+    color: rgba(0, 0, 0, 0.36);
+}
+
+#errorMsg {
+    color: red;
+    font-weight: bold;
+    border-bottom: 1px solid #000;
+}
+
+input {
+    cursor: pointer;
+    padding: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.19);
+}
+
+a {
+    text-decoration: none;
+}
+
+#errorUser, #errorInternet, #errorNotFoundOtherUrl, #errorSelect, #errorOtherOnline, #eventsBlock, #settingsBlock, #serverNull, #errorRefresh, #chatBlock, #errorNullMessage, #errorSendMessage {
+    visibility: hidden;
+    height: 0;
+    padding: 0;
+}
+
+div.saved {
+    color: cornflowerblue;
+}
+
+#chatMessages, #chatSend {
+    padding: 5px;
+    margin-top: 3px;
+    border: 1px solid #000;
+}
+
+#chatMessages {
+    max-height: 200px;
+    overflow-y: scroll;
+}
+
+.garants, .helpers, .profis, .other, .settings, .fortes, .map, .events{
+    font-size: 14px;
+//text-align: center;
+    font-weight: bold;
+    background: rgba(237, 237, 237, 0.48);
+    margin-top: -3px;
+    padding: 4px;
+    cursor: pointer;
+    height: 25px;
+    vertical-align: inherit;
+    float: left;
+    position: relative;
+    border-bottom: 3px solid #525ca3;
+    -webkit-transition:all 200ms;
+    -moz-transition:all 200ms;
+    -o-transition:all 200ms;
+}
+
+.settings{
+    position: absolute;
+    right: 15px;
+}
+
+.events{
+    position: absolute;
+    right: 45px;
+}
+
+#loading {
+    z-index: 25;
+    text-align: center;
+}
+
+#loading img {
+    opacity: 0.6;
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    position: absolute;
+    top: -10px; left: 0; bottom: 0; right: 25px;
+}
+
+.garants:hover, .helpers:hover, .other:hover, .settings:hover, .events:hover {
+    -webkit-transition:all 200ms;
+    -moz-transition:all 200ms;
+    -o-transition:all 200ms;
+}
+#active {
+    -webkit-transition: all 200ms;
+    border-bottom: 3px solid #fff;
+    border-bottom: 3px solid #6975ff;
+    box-shadow: inset 0 1px 14px #fff;
+    text-shadow: #fff 1px 2px 1px;
+    background: #dadeff;
+}
+
+.user {
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 3px;
+    margin-left: 1px;
+}
+
+#saveBlock {
+    border: 1px solid rgba(0, 0, 0, 0.19);
+    padding: 2px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+#saveBlockActive {
+    color: #000;
+}
+
+#value {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#server {
+    float: right;
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+    margin-right: 5px;
+    color: #5960bf;
+    position: relative;
+}
+
+#server.null {
+    background: rgba(237, 237, 237, 0.48);
+}
+
+/* group colors */
+.guest a{
+    color: #fff !important;
+    text-shadow: 0 0 2px #5b5b5b;
+}
+.free a{ color: #888 !important; }
+.vip a, .youtube a{
+    color: #2de200 !important;
+}
+.girls a{ color: #F6F !important; }
+.builders a{ color: #CCF !important; }
+.codes a{ color: #888 !important; }
+.mods a{ color: #F77 !important; }
+.eventmoder a{ color: #F77 !important; }
+.admins a{ color: #F44 !important; }
+.premium a{ color: #ffbd01 !important; }
+.helper a{ color: dodgerblue !important; }
+.platinum a{ color: #00a1d6 !important; }
+.code a{ color: #ff9500 !important; }
+.system a{ color: #F66 !important; font-weight: bold; text-shadow: 0.1em 0.1em 0.2em black; }
+.youtube a{
+
+}
+
+.user a{
+    /*text-shadow: 0px 0px 0px #5d5d5d, 0 0 1px #5d5d5d;*/
+    font-size: 17px;
+}
+
+#loader{
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -webkit-animation: preloader 1.5s infinite linear;
+    -moz-animation: preloader 1.5s infinite linear;
+    -ms-animation: preloader 1.5s infinite linear;
+    -o-animation: preloader 1.5s infinite linear;
+    animation: preloader 1.5s infinite linear;
+}
+
+@-webkit-keyframes preloader {
+    to { -webkit-transform: rotate(360deg); }
+}
+
+@-moz-keyframes preloader {
+    to { -moz-transform: rotate(360deg); }
+}
+
+@-ms-keyframes preloader {
+    to { -ms-transform: rotate(360deg); }
+}
+
+@-o-keyframes preloader {
+    to { -o-transform: rotate(360deg); }
+}
+
+@keyframes preloader {
+    to { transform: rotate(360deg); }
+}
+
+#view {
+    padding: 10px;
+    padding-bottom: 0;
+}
+
+#main {
+    z-index: 255;
+    position: relative;
+    display: inline-block;
+    padding: 5px;
+    width: 100%;
+}
+
+
+#status {
+    margin-top: 15px;
+    margin-left: 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+img#status {
+    position: relative;
+    background-position: 50% 0;
+    background-image: url("/img/error.png");
+    background-repeat: no-repeat;
+    margin: 5px;
+}
+
+#online {
+    padding: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+.error {
+    color: red;
+    margin-top: -10px;
+}
+
+.contentBlock {
+    width: auto;
+    min-height: 250px;
+}
+
+.loading-line {
+    height: 20px;
+    width: 50px;
+    right: 10px;
+    position: absolute;
+}
+
+/*
+	-- This style having bottom block
+*/
+
+.footerBlock {
+    width:100%;
+    background: -moz-linear-gradient(bottom, #ffffff 50%, #eeeeee 100%);
+    background: -webkit-gradient(linear, bottom bottom, bottom bottom, color-stop(0%,#ffffff), color-stop(100%,#eeeeee));
+    background: -webkit-linear-gradient(bottom, #ffffff 50%, #eeeeee 100%);
+    background: -o-linear-gradient(bottom, #ffffff 50%, #eeeeee 100%);
+    background: -ms-linear-gradient(bottom, #ffffff 50%, #eeeeee 100%);
+    background: linear-gradient(bottom, #ffffff 50%, #eeeeee 100%);
+    padding-bottom: 10px;
+}
+
+
+#links {
+    position: relative;
+    float: left;
+    font-size: 12px;
+    text-align: center;
+    padding-left: 5px;
+}
+
+#links a{
+    color: #000;
+    font-size: 14px;
+    text-shadow: 1px 1px 1px #fff, 1px 1px 1px #000;
+    border-bottom:1px solid #A4A4AD;
+}
+
+
+
+#rightLine {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    text-align: right;
+    z-index:255;
+    padding-right: 5px;
+
+}
+
+.refresh{
+    cursor: pointer;
+}
