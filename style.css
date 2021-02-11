@@ -7,6 +7,8 @@ html, body {
     min-width: 450px;
 }
 
+
+
 form {
     padding: 5px;
     color: rgba(0, 0, 0, 0.36);
@@ -28,7 +30,7 @@ a {
     text-decoration: none;
 }
 
-#errorUser, #errorInternet, #errorNotFoundOtherUrl, #errorSelect, #errorOtherOnline, #eventsBlock, #settingsBlock, #serverNull, #errorRefresh, #chatBlock, #errorNullMessage, #errorSendMessage {
+#errorUser, #errorInternet, #errorNotFoundOtherUrl, #skinsBlock, #errorSelect, #errorOtherOnline, #eventsBlock, #settingsBlock, #serverNull, #errorRefresh, #chatBlock, #errorNullMessage, #errorSendMessage {
     visibility: hidden;
     height: 0;
     padding: 0;
@@ -44,14 +46,19 @@ div.saved {
     border: 1px solid #000;
 }
 
+.img-icon{
+    width: 20px;
+    height: 20px;
+}
+
 #chatMessages {
     max-height: 200px;
     overflow-y: scroll;
 }
 
-.garants, .helpers, .profis, .other, .settings, .fortes, .map, .events{
+.garants, .helpers, .profis, .other, .settings, .skins, .map, .events{
     font-size: 14px;
-//text-align: center;
+    //text-align: center;
     font-weight: bold;
     background: rgba(237, 237, 237, 0.48);
     margin-top: -3px;
@@ -91,7 +98,7 @@ div.saved {
     top: -10px; left: 0; bottom: 0; right: 25px;
 }
 
-.garants:hover, .helpers:hover, .other:hover, .settings:hover, .events:hover {
+.garants:hover, .helpers:hover, .skins:hover, .other:hover, .settings:hover, .events:hover {
     -webkit-transition:all 200ms;
     -moz-transition:all 200ms;
     -o-transition:all 200ms;
@@ -277,8 +284,10 @@ img#status {
     position: relative;
     float: left;
     font-size: 12px;
-    text-align: center;
-    padding-left: 5px;
+    text-align: left;
+    width: 80%;
+    margin-left: 10px;
+    padding: 0;
 }
 
 #links a{
@@ -295,10 +304,22 @@ img#status {
     -moz-user-select: none;
     text-align: right;
     z-index:255;
-    padding-right: 5px;
+    max-width: 30px;
+    position: relative;
+    float: right;
 
 }
 
 .refresh{
     cursor: pointer;
+}
+
+.new {
+    color: red;
+}
+
+.remove-this{
+    margin: 5px;
+    min-width: 25px;
+    min-height: 25px;
 }

@@ -3,16 +3,19 @@
  */
 class Settings {
 
-    getStorage() {
-        var itemsData;
-        chrome.storage.local.get(['otherUrl', 'resetTime', 'installApp', 'refreshAt'], function (items) {
-            if (typeof items !== 'undefined' && items.length > 0) {
-                otherUrl   = items.otherUrl;
-                resetTime  = items.resetTime;
-                installApp = items.installApp;
-                refreshAt  = items.refreshAt;
-            };
+    getStorage(field) {
+        var returnValue = false;
+        chrome.storage.local.get([field], function (items) {
+            if (items.hasOwnProperty(field)) {
+                console.log("have");
+                console.log(items[field]);
+                returnValue = items[field];
+            } else {
+
+                console.log("not have");
+            }
         });
+        return  returnValue;
     }
 
     setStorage(field, value) {
@@ -24,6 +27,7 @@ class Settings {
         }
 
         if (field == "otherUrl") {
+            console.log("qq");
             chrome.storage.local.set({otherUrl: value});
         }
         if (field == "resetTime") {

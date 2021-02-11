@@ -1,5 +1,5 @@
 {
-  "version": "0.2.5",
+  "version": "0.2.8",
   "default_locale": "ru",
   "manifest_version": 2,
   
@@ -16,16 +16,16 @@
  
   "background": {
     "scripts": [
-      "forum_helpers/background.js",
-      "safeResponse.js",
-      "dateHelper.js"
+        "forum_helpers/background.js",
+        "safeResponse.js",
+        "dateHelper.js"
 	  ]
   },
 
    "permissions": [
-     "unlimitedStorage",
      "storage",
-     "*://forum.minecraft-galaxy.ru/*",
+     "http://forum.minecraft-galaxy.ru/*",
+     "https://forum.minecraft-galaxy.ru/*",
 	 "tabs"
   ],
   

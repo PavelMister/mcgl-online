@@ -1,5 +1,4 @@
 dateHelper = function(){
-
     this.__getDifferenceDate = function(date) {
         var now = new Date();
         var dateFromAPITimeStamp = (new Date(date)).getTime();
